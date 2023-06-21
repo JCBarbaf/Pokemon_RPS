@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="author" content="Juan Carlos Barba Fernández">
+        <meta name="description" content="Play the pokemon version of rock, paper, scissors or try a version of the game with 5 pokemon types.">
+        <meta name="keywords" content="pokemon, rock, paper, scissors, type, game, one player">
+		<title>Pokémon Rock, paper, scissors.</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../css/style.css">
+		<link rel="shortcut icon" href="../img/icon.svg" type="image/x-icon">
+	</head>
+	<body>
+		<div id="pokedex">
+			<a href="../index.html" id="home"></a>
+			<a href="rps3.html" id="rps3" data-toggle="tooltip" data-placement="top" title="3 types"></a>
+			<a href="" id="rps5" data-toggle="tooltip" data-placement="top" title="5 types"></a>
+			<a href="howtoplay.html" id="howtoplay" data-toggle="tooltip" data-placement="top" title="How to play"></a>
+			<div id="scores">
+				<p><b>Player 1:</b> <span>0</span></p>
+				<p><b>Player 2:</b> <span>0</span></p>
+			</div>
+			<img src="../img/pokedex.svg" id="background">
+			<div id="type1">
+				<p>Player 1</p>
+				<img src="../img/blank.svg">
+				<p></p>
+			</div>
+			<img src="../img/vs.svg" id="vs">
+			<div id="type2">
+				<p>Player 2</p>
+				<img src="../img/blank.svg">
+				<p></p>
+			</div>
+			<p id="winner"></p>
+			<button id="battle" class="battleretry" onclick="RPS3('play',5)"><img src="../img/battle.svg"></button>
+			<button id="replay" class="battleretry" onclick="RPS3('replay',5)"><img src="../img/replay.svg"></button>
+		</div>
+		<div id="buttons">
+			<button id="fire" onclick="RPS3('fire',5)">Fire</button>
+			<button id="grass" onclick="RPS3('grass',5)">Grass</button>
+			<button id="ground" onclick="RPS3('ground',5)">Ground</button>
+			<button id="ice" onclick="RPS3('ice',5)">Ice</button>
+			<button id="rock" onclick="RPS3('rock',5)">Rock</button>
+		</div>
+		<script src="../js/main.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $('[data-toggle="tooltip"]').tooltip();   
+			});
+		</script>
+	</body>
+</html>
